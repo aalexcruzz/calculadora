@@ -11,12 +11,12 @@ int main ()
 
 		do
 		{
-			printf("Calculadora: \n" ) ;
-			printf("Que operacion desea realizar: \n");
-			printf("1.Suma: \n");
-			printf("2.Resta: \n");
-			printf("3.Multiplicacion: \n");
-			printf("4.Salir: \n");
+			printf("Calculadora\n" ) ;
+			printf("Que operacion desea realizar: \n \n");
+			printf("1.Suma \n");
+			printf("2.Resta \n");
+			printf("3.Multiplicacion \n");
+			printf("4.Salir \n");
 
 		scanf("%d",&opc ) ;
 		switch (opc)
@@ -42,7 +42,16 @@ return 0;
 			{
 			do
 			{
-
+				printf("Primer dato:");
+				scanf("%d",&d1);
+				printf("Segundo dato:") ;
+				scanf("%d",&d2 ) ;
+				r1=d1+d2;
+				printf("%d + %d = %d \n",d1,d2,r1 ) ;
+				printf("Desea continuar sumando? \n"); 
+				printf("1-Si \n2-No \n") ;
+								
+				
 			scanf("%d",&c1 ) ;
 			} while (c1==1 ) ;
 			}
