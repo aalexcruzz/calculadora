@@ -52,8 +52,8 @@ return 0;
 				printf("1-Si \n2-No \n") ;
 								
 				
-			scanf("%d",&c1 ) ;
-			} while (c1==1 ) ;
+			scanf("%d",&c1 );
+			} while (c1==1 );
 			}
 				void Restar()
 			{
@@ -66,11 +66,20 @@ return 0;
 			{
 			do
 			{
-
+				printf("Primer dato:");
+				scanf("%d",&d1);
+				printf("Segundo dato:") ;
+				scanf("%d",&d2 ) ;
+				r1=d1*d2;
+				printf("%d x %d = %d \n",d1,d2,r1 ) ;
+				printf("Desea continuar multiplicando? \n"); 
+				printf("1-Si \n2-No \n") ;
+				
 			scanf("%d",&c1 ) ;
 			} while (c1==1 ) ;
 
-} 
+			} 
+
 
 
 
