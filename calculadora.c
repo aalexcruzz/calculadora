@@ -16,8 +16,9 @@ int main ()
 			printf("1.Suma \n");
 			printf("2.Resta \n");
 			printf("3.Multiplicacion \n");
-			printf("4.Salir \n");
-
+			printf("4.Salir \n \n");
+		
+		printf("Elija un numero: ");
 		scanf("%d",&opc ) ;
 		switch (opc)
 		{
@@ -34,9 +35,9 @@ int main ()
 			return 0 ;
 			break;
 		default:printf("--ERROR-- -opcion invalida-" ) ;
-}
-} while (opc!=4 ) ;
-return 0;
+	}
+	} while (opc!=4 ) ;
+		return 0;
 			}
 				void Sumar()
 			{
@@ -47,19 +48,32 @@ return 0;
 				printf("Segundo dato:") ;
 				scanf("%d",&d2 ) ;
 				r1=d1+d2;
-				printf("%d + %d = %d \n",d1,d2,r1 ) ;
+				printf("%d + %d = %d \n \n",d1,d2,r1 ) ;
 				printf("Desea continuar sumando? \n"); 
-				printf("1-Si \n2-No \n") ;
-								
+				printf("1-Si \n2-No \n \n") ;
+				printf("Elija un numero: ");
+					
 				
 			scanf("%d",&c1 );
+			printf("\n");
 			} while (c1==1 );
 			}
 				void Restar()
 			{
 			do
 			{
+				printf("Primer dato:");
+				scanf("%d",&d1);
+				printf("Segundo dato:") ;
+				scanf("%d",&d2 ) ;
+				r1=d1-d2;
+				printf("%d - %d = %d \n \n",d1,d2,r1 ) ;
+				printf("Desea continuar restando? \n"); 
+				printf("1-Si \n2-No \n \n") ;
+				printf("Elija un numero: ");
 
+			scanf("%d",&c1 );
+			printf("\n");
 			} while (c1==1 ) ;
 			}
 				void Multi()
@@ -71,11 +85,13 @@ return 0;
 				printf("Segundo dato:") ;
 				scanf("%d",&d2 ) ;
 				r1=d1*d2;
-				printf("%d x %d = %d \n",d1,d2,r1 ) ;
+				printf("%d x %d = %d \n \n",d1,d2,r1 ) ;
 				printf("Desea continuar multiplicando? \n"); 
-				printf("1-Si \n2-No \n") ;
+				printf("1-Si \n2-No \n \n") ;
+				printf("Elija un numero: ");
 				
 			scanf("%d",&c1 ) ;
+			printf("\n");
 			} while (c1==1 ) ;
 
 			} 
