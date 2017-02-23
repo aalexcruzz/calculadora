@@ -1,17 +1,25 @@
 #include<stdio.h>
+#define BITS 64
+#define BITS2 64
+
 int opc,d1=0,d2=0,r1=0,c1=0;
-float r2=0,d3=0,d4=0;
+
+int Numbin[64];
+int Numbin2[64];
+int Numdec;
+int Numdec2;
+int contador;
+int contador2;
 
 void Sumar();
 void Restar();
 void Multi();
-void Divid();
 int main ()
 {
-
+	
 		do
 		{
-			printf("Calculadora\n" ) ;
+			printf("Calculadora binaria a hexadecimal \n" ) ;
 			printf("Que operacion desea realizar: \n \n");
 			printf("1.Suma \n");
 			printf("2.Resta \n");
@@ -20,6 +28,8 @@ int main ()
 		
 		printf("Elija un numero: ");
 		scanf("%d",&opc ) ;
+		
+		
 		switch (opc)
 		{
 		case 1: 
@@ -39,17 +49,38 @@ int main ()
 	} while (opc!=4 ) ;
 		return 0;
 			}
+			
+			
+
+			
 				void Sumar()
 			{
 			do
 			{
 				printf("Primer dato:");
-				scanf("%d",&d1);
-				printf("Segundo dato:") ;
-				scanf("%d",&d2 ) ;
-				r1=d1+d2;
-				printf("%d + %d = %d \n \n",d1,d2,r1 ) ;
-				printf("Desea continuar sumando? \n"); 
+				scanf("%d",&Numdec);
+				
+				for ( contador = 0; contador <= BITS; contador++ ) {
+				Numbin[contador] = Numdec % 2;
+				Numdec = Numdec / 2;
+				}
+				for ( contador = BITS; contador >= 0; contador-- ) {
+					printf("%d", Numbin[contador]);
+				}
+				
+				printf("Segundo dato: ") ;
+				scanf("%d",&Numdec2 ) ;
+				for ( contador2 = 0; contador2 <= BITS2; contador2++ ) {
+				Numbin2[contador2] = Numdec2 % 2;
+				Numdec2 = Numdec2/ 2;
+				}
+				for ( contador2 = BITS2; contador2 >= 0; contador2-- ) {
+				printf("%d", Numbin2[contador2]);
+				}
+				
+				r1=Numdec+Numdec2;
+				//printf("%d + %d = %d \n \n",Numdec,Numdec2,r1 ) ;
+				printf("\n Desea continuar sumando? \n"); 
 				printf("1-Si \n2-No \n \n") ;
 				printf("Elija un numero: ");
 					
@@ -62,15 +93,7 @@ int main ()
 			{
 			do
 			{
-				printf("Primer dato:");
-				scanf("%d",&d1);
-				printf("Segundo dato:") ;
-				scanf("%d",&d2 ) ;
-				r1=d1-d2;
-				printf("%d - %d = %d \n \n",d1,d2,r1 ) ;
-				printf("Desea continuar restando? \n"); 
-				printf("1-Si \n2-No \n \n") ;
-				printf("Elija un numero: ");
+				
 
 			scanf("%d",&c1 );
 			printf("\n");
@@ -80,19 +103,15 @@ int main ()
 			{
 			do
 			{
-				printf("Primer dato:");
-				scanf("%d",&d1);
-				printf("Segundo dato:") ;
-				scanf("%d",&d2 ) ;
-				r1=d1*d2;
-				printf("%d x %d = %d \n \n",d1,d2,r1 ) ;
-				printf("Desea continuar multiplicando? \n"); 
-				printf("1-Si \n2-No \n \n") ;
-				printf("Elija un numero: ");
 				
 			scanf("%d",&c1 ) ;
 			printf("\n");
 			} while (c1==1 ) ;
+
+
+
+
+
 
 			} 
 
